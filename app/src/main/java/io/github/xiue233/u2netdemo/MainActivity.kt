@@ -35,14 +35,14 @@ class MainActivity : AppCompatActivity() {
         originImg = findViewById(R.id.img_origin)
         originImg.setImageDrawable(
             Drawable.createFromStream(
-                assets.open("cat.jpg"),
-                "cat"
+                assets.open("woman.jpeg"),
+                "woman"
             )
         )
         thread {
             val module = Module.load(assetFilePath(this, "u2netp_small_live_test.ptl"))
             val bitmap = BitmapFactory.decodeStream(
-                assets.open("cat.jpg")
+                assets.open("woman.jpeg")
             )
             //You can see the code of TensorImageUtils.bitmapToFloatBuffer() to have a better
             //understanding of how the content of a tensor is written.
